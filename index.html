@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Star Wars API QUIZ</title>
+		<link rel="stylesheet" href="/StarWarsQuizByme/styles/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<div class="swquiz-app">
+			<div class="left">
+				<div class="logo">
+					<img src="imgUi/StarWarsLogo.png" alt="StarWars" />
+				</div>
+				<div class="starWarsImg">
+					<img class="swImage" src="imgUi/jajar.jpg" alt="Character" />
+				</div>
+				<div class="settingBtn">
+					<a href="#">
+						<button>
+							<span>Settings</span>
+						</button>
+					</a>
+				</div>
+			</div>
+
+			<div class="right">
+				<div class="menu">
+					<div class="buttonsOptions">
+						<div class="peopleOption">
+							<button class="peopleOptionB">
+								<a class="borderBottomBoxShadow"
+									><span>People</span>
+									<p class="border activeIndicator"></p
+								></a>
+							</button>
+						</div>
+						<div class="vehiclesOption">
+							<button class="vehiclesOptionB">
+								<a class="borderBottomBoxShadow"
+									><span>Vehicles</span>
+									<p class="border"></p
+								></a>
+							</button>
+						</div>
+						<div class="starshipsOption">
+							<button class="starshipsOptionB">
+								<a class="borderBottomBoxShadow"
+									><span>Starships</span>
+									<p class="border"></p
+								></a>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="descriptionModes">
+					<div class="descriptionHeader">
+						<span>MODE: Who is this character?</span>
+					</div>
+					<div class="description">
+						<div class="descriptionModeRules">
+							<p class="moderulesHeader">
+								<svg
+									width="50"
+									height="50"
+									viewBox="0 0 50 50"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M2.0835 18.75L25.0002 6.25L47.9168 18.75V35.4167H43.7502V21.0208L25.0002 31.25L2.0835 18.75ZM10.4168 35.7917V27.4584L25.0002 35.4167L39.5835 27.4584V35.7917L25.0002 43.7501L10.4168 35.7917Z"
+										fill="black" />
+								</svg>
+								Mode Rules
+							</p>
+							<span
+								>You have one minute (1m) to answer as many questions as possible. During the game
+								on each question you need to select who from Star Wars is showed on the left (Jar
+								Jar Binks right now) from available options, or select that the character is none of
+								above.</span
+							>
+						</div>
+						<div class="descriptionHallOfFame hidden">
+							<p class="titleRanking">
+								<svg
+									width="50"
+									height="50"
+									viewBox="0 0 50 50"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										fill-rule="evenodd"
+										clip-rule="evenodd"
+										d="M41.6666 0H8.33329V4.16667H41.6666V0ZM41.6666 50V45.8333H8.33329V50H41.6666ZM8.33329 8.33333H41.6666C43.9583 8.33333 45.8333 10.2083 45.8333 12.5V37.5C45.8333 39.7917 43.9583 41.6667 41.6666 41.6667H8.33329C6.04163 41.6667 4.16663 39.7917 4.16663 37.5V12.5C4.16663 10.2083 6.04163 8.33333 8.33329 8.33333ZM25 14.0625C27.5833 14.0625 29.6875 16.1667 29.6875 18.75C29.6875 21.3333 27.5833 23.4375 25 23.4375C22.4166 23.4375 20.3125 21.3333 20.3125 18.75C20.3125 16.1667 22.4166 14.0625 25 14.0625ZM14.5833 32.2917V35.4167H35.4166V32.2917C35.4166 28.8125 28.4791 27.0833 25 27.0833C21.5208 27.0833 14.5833 28.8125 14.5833 32.2917Z"
+										fill="black" />
+								</svg>
+								Mode Ranking
+							</p>
+							<table>
+								<col style="width: 20%" />
+								<col style="width: 50%" />
+								<col style="width: 30%" />
+								<thead>
+									<tr style="height: 15%">
+										<th>Place</th>
+										<th>Player</th>
+										<th>Answered</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr style="height: 20%">
+										<td>1st</td>
+										<td class="player">${var}</td>
+										<td class="answer">${var}/${var}</td>
+									</tr>
+									<tr style="height: 20%">
+										<td>2nd</td>
+										<td class="player">${var}</td>
+										<td class="answer">${var}/${var}</td>
+									</tr>
+									<tr style="height: 20%">
+										<td>3rd</td>
+										<td class="player">${var}</td>
+										<td class="answer">${var}/${var}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div class="answers">
+						<div>
+							<button class="buttonAnswer"><span>Jar Jar</span></button>
+							<button class="buttonAnswer"><span>Jar Jar</span></button>
+						</div>
+						<div>
+							<button class="buttonAnswer"><span>Jar Jar</span></button>
+							<button class="buttonAnswer"><span>Jar Jar</span></button>
+						</div>
+					</div>
+				</div>
+				<div class="buttons">
+					<div class="FameRanking firstRanking">
+						<svg
+							width="50"
+							height="50"
+							viewBox="0 0 50 50"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M41.6666 0H8.33329V4.16667H41.6666V0ZM41.6666 50V45.8333H8.33329V50H41.6666ZM8.33329 8.33333H41.6666C43.9583 8.33333 45.8333 10.2083 45.8333 12.5V37.5C45.8333 39.7917 43.9583 41.6667 41.6666 41.6667H8.33329C6.04163 41.6667 4.16663 39.7917 4.16663 37.5V12.5C4.16663 10.2083 6.04163 8.33333 8.33329 8.33333ZM25 14.0625C27.5833 14.0625 29.6875 16.1667 29.6875 18.75C29.6875 21.3333 27.5833 23.4375 25 23.4375C22.4166 23.4375 20.3125 21.3333 20.3125 18.75C20.3125 16.1667 22.4166 14.0625 25 14.0625ZM14.5833 32.2917V35.4167H35.4166V32.2917C35.4166 28.8125 28.4791 27.0833 25 27.0833C21.5208 27.0833 14.5833 28.8125 14.5833 32.2917Z"
+								fill="black" /></svg
+						><span>Hall of fame</span>
+					</div>
+					<div class="FameRanking secondRanking hidden">
+						<svg
+							width="50"
+							height="50"
+							viewBox="0 0 50 50"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M2.0835 18.75L25.0002 6.25L47.9168 18.75V35.4167H43.7502V21.0208L25.0002 31.25L2.0835 18.75ZM10.4168 35.7917V27.4584L25.0002 35.4167L39.5835 27.4584V35.7917L25.0002 43.7501L10.4168 35.7917Z"
+								fill="black" /></svg
+						><span>Rules</span>
+					</div>
+
+					<div class="playButton">PLAY THE GAME</div>
+				</div>
+			</div>
+		</div>
+		<div class="saber">
+			<div class="lightSaber">
+				<img src="imgUi/LightsaberHandle.png" alt="LightsaberHandle" />
+				<div class="light">
+					<div></div>
+				</div>
+			</div>
+			<p><span class="timeLeft">Time Left: 1m 00s</span></p>
+		</div>
+		<div class="GameOverScreen hidden">
+			<div class="gameOverContent">
+				<div class="title">GAME OVER</div>
+				<div class="summary">
+					The force is strong in you young Padawan! During 1 minute you have answered
+					<span class="questionPoints"></span> questions and Computer quessed
+					<span class="questionPointsPc"></span>.
+				</div>
+				<div class="answersSummary">
+					<div class="imgYoda"><img src="imgUi/MasterYodaLeft.png" /></div>
+					<div class="Answers">
+						<div class="grid-table">
+							<div class="item1 detail">Detailed Answers</div>
+							<div class="header1 headline">Image</div>
+							<div class="header2 headline">You</div>
+							<div class="header3 headline">Computer</div>
+							<div class="header4 headline">Answer</div>
+						</div>
+					</div>
+				</div>
+				<div class="nicknameForm">
+					<input class="inputNickname" placeholder="Nickname" type="text" required />
+					<p>Please fill your name in order to receive eternal glory in whole Galaxy!</p>
+				</div>
+				<div class="forceButton"><button type="submit">MAY THE FORCE BE WITH YOU!</button></div>
+			</div>
+		</div>
+		<script type="module" src="main.js"></script>
+		<script type="module" src="stylesEffect.js"></script>
+		<script type="module" src="modesJS/peopleMode.js"></script>
+		<script type="module" src="modesJS/starshipsMode.js"></script>
+		<script type="module" src="modesJS/vehiclesMode.js"></script>
+	</body>
+</html>
